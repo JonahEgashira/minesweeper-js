@@ -1,3 +1,8 @@
+/**
+ * author: Jonah Egashira
+ * created: 2019/12
+ */
+
 let grid;
 let n = 0;
 let m = 0;
