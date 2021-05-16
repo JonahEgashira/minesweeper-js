@@ -1,0 +1,64 @@
+body {
+  background: white;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  text-align: center;
+}
+
+.difficultyRadio{
+  margin: 10px;
+}
+
+h1{
+  text-align: center;
+}
+
+.difficultyList {
+  display: inline-block;
+  text-align: left;
+}
+ ul{
+   margin: 5px;
+ }
+
+
+#grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#grid tr td{
+  border:1px solid black;
+  color: white;
+  background: DimGray;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#grid tr td.flag{
+  color: white;
+  background: blue;
+}
+
+#grid tr td.isClicked {
+    background:	Gainsboro;
+}
+
+#grid tr td.mine {
+    background: #FF0000;
+}
+
+#flagArea {
+  margin : 10px;
+}
+
+#customText {
+  text-align: center;
+  margin : 10px;
+}
+
+.numberText {
+  display: inline-block;
+  text-align: left;
+}

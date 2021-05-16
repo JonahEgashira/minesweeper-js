@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script type= "text/javascript" src="jQuery.js"></script>
+  <script src="mt.js"></script>
+  <script src="minesweeper.js"></script>
+  <link rel="stylesheet" href="minesweeper.css">
+  <title>MineSweeper</title>
+</head>
+
+<div id = "Info">
+
+  <h1>MineSweeper</h1>
+  <ol class = "difficultyList">
+    <ul>Easy Mode   :10 mines in 9 x 9 Grid</ul>
+    <ul>Normal Mode :40 mines in 16 x 16 Grid</ul>
+    <ul>Hard Mode   :99 mines in 30 x 16 Grid</ul>
+    <ul>Insane Mode :777 mines in 68 x 48 Grid</ul>
+    <ul>Custom Mode :Please input number of rows, columns, and mines</ul>
+  </ol>
+
+  <p>When Flag is selected, you can set a flag on grid</p>
+
+  <body>
+    <input type="button" value="Start Game" onclick="generateGrid()">
+
+    <form id = "difficulty">
+      <span>Easy</span><label><input type="radio" class = "difficultyRadio" name = "rb" id="easy" onclick="setGameStatus()"></label>
+      <span>Normal</span><label><input type="radio" class = "difficultyRadio" name = "rb" id="normal" onclick="setGameStatus()"></label>
+      <span>Hard</span><label><input type="radio" class = "difficultyRadio" name = "rb" id="hard" onclick="setGameStatus()"></label>
+      <span>Insane</span><label><input type="radio" class = "difficultyRadio" name = "rb" id="insane" onclick="setGameStatus()"></label>
+      <span>Custom</span><label><input type="radio" class = "difficultyRadio" name = "rb" id="custom" onclick="setGameStatus()"></label>
+    </form>
+
+  </div>
+
+    <form id ="customText">
+      <div class="numberText">
+        <span>Number of Rows   :</span><input type="text" id = "numberN"><br>
+        <span>Number of Columns:</span><input type="text" id = "numberM"><br>
+        <span>Number of Mines  :</span><input type="text" id = "numberMine"><br>
+      </div>
+    </form>
+
+    <form id="flagArea">
+      <span>Flag</span><label><input type="radio" id = "flag" value = 1 onclick="flagChecked(this)"></label>
+      <span>Flag Left:</span><span id = "flagLeft"></span>
+    </form>
+
+    <div class="timer" id = "timerArea">Click to Start Game</div>
+    <table id = "grid"></table>
+  </body>
+</html>
